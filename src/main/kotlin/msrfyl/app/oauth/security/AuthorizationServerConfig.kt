@@ -6,39 +6,44 @@ import com.nimbusds.jose.jwk.RSAKey
 import com.nimbusds.jose.jwk.source.JWKSource
 import com.nimbusds.jose.proc.SecurityContext
 import kong.unirest.HttpResponse
-import msrfyl.app.oauth.OauthApplication
 import msrfyl.app.oauth.U
 import org.slf4j.LoggerFactory
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.core.Ordered
 import org.springframework.core.annotation.Order
-import org.springframework.security.config.Customizer
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
+import org.springframework.security.config.annotation.web.configuration.OAuth2AuthorizationServerConfiguration
 import org.springframework.security.config.http.SessionCreationPolicy
 import org.springframework.security.core.Authentication
 import org.springframework.security.oauth2.core.AuthorizationGrantType
 import org.springframework.security.oauth2.core.ClientAuthenticationMethod
-import org.springframework.security.oauth2.server.authorization.OAuth2TokenType
+import org.springframework.security.oauth2.core.OAuth2TokenType
+import org.springframework.security.oauth2.server.authorization.JwtEncodingContext
+import org.springframework.security.oauth2.server.authorization.OAuth2TokenCustomizer
 import org.springframework.security.oauth2.server.authorization.client.InMemoryRegisteredClientRepository
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClient
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClientRepository
-import org.springframework.security.oauth2.server.authorization.config.annotation.web.configuration.OAuth2AuthorizationServerConfiguration
-import org.springframework.security.oauth2.server.authorization.config.annotation.web.configurers.OAuth2AuthorizationServerConfigurer
-import org.springframework.security.oauth2.server.authorization.settings.AuthorizationServerSettings
-import org.springframework.security.oauth2.server.authorization.settings.TokenSettings
-import org.springframework.security.oauth2.server.authorization.token.JwtEncodingContext
-import org.springframework.security.oauth2.server.authorization.token.OAuth2TokenCustomizer
+import org.springframework.security.oauth2.server.authorization.config.ProviderSettings
+import org.springframework.security.oauth2.server.authorization.config.TokenSettings
 import org.springframework.security.web.SecurityFilterChain
-import org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint
 import org.springframework.web.context.request.RequestContextHolder
 import org.springframework.web.context.request.ServletRequestAttributes
+import java.io.IOException
 import java.security.KeyPair
 import java.security.KeyPairGenerator
 import java.security.interfaces.RSAPrivateKey
 import java.security.interfaces.RSAPublicKey
 import java.time.Duration
 import java.util.*
+import javax.servlet.Filter
+import javax.servlet.FilterChain
+import javax.servlet.FilterConfig
+import javax.servlet.ServletException
+import javax.servlet.ServletRequest
+import javax.servlet.ServletResponse
+import javax.servlet.http.HttpServletRequest
+import javax.servlet.http.HttpServletResponse
 
 
 @Configuration(proxyBeanMethods = false)
@@ -60,24 +65,25 @@ class AuthorizationServerConfig {
         val client: MutableList<RegisteredClient> = U.registerClient().map {
             LoggerFactory.getLogger(AuthorizationServerConfig::class.java).info("register client: ${it.clientId}")
             val r = RegisteredClient.withId(UUID.randomUUID().toString())
-                    .clientId(it.clientId)
-                    .clientSecret("{noop}${it.clientSecret}")
-                    .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
+                .clientId(it.clientId)
+                .clientSecret("{noop}${it.clientSecret}")
+                .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
             it.authorizationGrantTypes.forEach { ag ->
                 r.authorizationGrantType(
-                        when (ag) {
-                            "client_credentials" -> AuthorizationGrantType.CLIENT_CREDENTIALS
-                            "refresh_token" -> AuthorizationGrantType.REFRESH_TOKEN
-                            "authorization_code" -> AuthorizationGrantType.AUTHORIZATION_CODE
-                            "jwt_bearer" -> AuthorizationGrantType.JWT_BEARER
-                            else -> AuthorizationGrantType.PASSWORD
-                        }
+                    when (ag) {
+                        "client_credentials" -> AuthorizationGrantType.CLIENT_CREDENTIALS
+                        "refresh_token" -> AuthorizationGrantType.REFRESH_TOKEN
+                        "authorization_code" -> AuthorizationGrantType.AUTHORIZATION_CODE
+                        "jwt_bearer" -> AuthorizationGrantType.JWT_BEARER
+                        else -> AuthorizationGrantType.PASSWORD
+                    }
                 )
             }
             it.redirectUrl?.let { re -> r.redirectUri(re) }
             it.scopes.forEach { sc -> r.scope(sc) }
             r.tokenSettings(
-                    TokenSettings.builder().accessTokenTimeToLive(Duration.ofSeconds(it.accessTokenExpired)).refreshTokenTimeToLive(Duration.ofSeconds(it.refreshTokenExpired)).build()
+                TokenSettings.builder().accessTokenTimeToLive(Duration.ofSeconds(it.accessTokenExpired))
+                    .refreshTokenTimeToLive(Duration.ofSeconds(it.refreshTokenExpired)).build()
             ).build()
         }.toMutableList()
 
@@ -90,7 +96,7 @@ class AuthorizationServerConfig {
         val jwkSet = JWKSet(rsaKey)
         return JWKSource { jwkSelector: JWKSelector, _: SecurityContext? ->
             jwkSelector.select(
-                    jwkSet
+                jwkSet
             )
         }
     }
@@ -100,9 +106,9 @@ class AuthorizationServerConfig {
         val publicKey = keyPair.public as RSAPublicKey
         val privateKey = keyPair.private as RSAPrivateKey
         return RSAKey.Builder(publicKey)
-                .privateKey(privateKey)
-                .keyID(UUID.randomUUID().toString())
-                .build()
+            .privateKey(privateKey)
+            .keyID(UUID.randomUUID().toString())
+            .build()
     }
 
     private fun generateRsaKey(): KeyPair {
@@ -116,33 +122,70 @@ class AuthorizationServerConfig {
         return keyPair
     }
 
+    //    @Bean
+//    fun authorizationServerSettings(): AuthorizationServerSettings {
+//        return AuthorizationServerSettings.builder()
+//            .issuer(U.authUrl)
+//            .build()
+//    }
     @Bean
-    fun authorizationServerSettings(): AuthorizationServerSettings {
-        return AuthorizationServerSettings.builder()
-                .issuer(U.authUrl)
-                .build()
+    fun providerSettings(): ProviderSettings? {
+        return ProviderSettings.builder()
+            .issuer(U.authUrl)
+            .build()
     }
 
     @Bean
     fun jwtCustomizer(): OAuth2TokenCustomizer<JwtEncodingContext>? {
         return OAuth2TokenCustomizer { context: JwtEncodingContext ->
-            println("OAuth2TokenCustomizer...")
-            if ((AuthorizationGrantType.AUTHORIZATION_CODE == context.authorizationGrantType || AuthorizationGrantType.REFRESH_TOKEN == context.authorizationGrantType) && OAuth2TokenType.ACCESS_TOKEN == context.tokenType) {
-                println("if...")
+            if ((AuthorizationGrantType.AUTHORIZATION_CODE == context.authorizationGrantType
+                        || AuthorizationGrantType.REFRESH_TOKEN == context.authorizationGrantType)
+                && OAuth2TokenType.ACCESS_TOKEN == context.tokenType
+            ) {
                 val principal: Authentication = context.getPrincipal()
-                val res: HttpResponse<Map<*, *>> = U.accessClient.post("${U.clientUrl}/tokenData")
-                        .field("username", principal.name)
-                        .asObject(Map::class.java)
+                val res: HttpResponse<Map<*, *>> = U.accessClient.post("${U.clientUrl}/api/tokenData")
+                    .field("username", principal.name)
+                    .asObject(Map::class.java)
                 res.body.entries.forEach {
                     context.claims.claim(it.key.toString(), it.value)
                 }
             }
 
-            val requestAttributes = RequestContextHolder.getRequestAttributes()
-            val request = (requestAttributes as ServletRequestAttributes).request
-            val prt = if (request.isSecure) "https" else "http"
-            context.claims.claim("iss", "$prt://${request.serverName}:${request.serverPort}")
+            RequestContextHolder.getRequestAttributes()?.let { rc ->
+                val request = (rc as ServletRequestAttributes).request
+                val prt = if (request.isSecure) "https" else "http"
+                context.claims.claim("iss", "$prt://${request.serverName}:${request.serverPort}")
+            }
+
         }
     }
 
+}
+
+@Configuration
+@Order(Ordered.HIGHEST_PRECEDENCE)
+class SimpleCORSFilter : Filter {
+    @Throws(ServletException::class)
+    override fun init(fc: FilterConfig?) {
+    }
+
+    @Throws(IOException::class, ServletException::class)
+    override fun doFilter(req: ServletRequest, resp: ServletResponse, chain: FilterChain) {
+        val response = resp as HttpServletResponse
+        val request = req as HttpServletRequest
+        response.setHeader("Access-Control-Allow-Origin", "*")
+        response.setHeader("Access-Control-Allow-Methods", "PATCH,PUT,POST,GET,OPTIONS,DELETE")
+        response.setHeader("Access-Control-Max-Age", "3600")
+        response.setHeader(
+            "Access-Control-Allow-Headers",
+            "x-requested-with, authorization, Content-Type, Authorization, credential, X-XSRF-TOKEN"
+        )
+        if ("OPTIONS".equals(request.method, ignoreCase = true)) {
+            response.status = HttpServletResponse.SC_OK
+        } else {
+            chain.doFilter(req, resp)
+        }
+    }
+
+    override fun destroy() {}
 }

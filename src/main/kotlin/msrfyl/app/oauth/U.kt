@@ -44,20 +44,35 @@ object U {
             val mapConfig: MutableMap<String, Any> = mutableMapOf()
             mapConfig["server"] = mutableMapOf(Pair("port", it["port"] ?: 8080))
             mapConfig["spring"] = mutableMapOf(
-                    Pair(
-                            "security", pair("oauth2", pair("client",
-                            mutableMapOf(Pair("registration", pair("auth-client", mutableMapOf(
-                                    Pair("authorization-grant-type", "client_credentials"),
-                                    Pair("client-id", "auth-client"),
-                                    Pair("client-secret", "secret"),
-                                    Pair("scope", "internal"),
-                                    Pair("client-name", "auth-client")
-                            ))),
-                            Pair(
+                Pair(
+                    "security", pair(
+                        "oauth2",
+                        pair(
+                            "client", mutableMapOf(
+                                Pair(
+                                    "registration", arrayListOf(
+                                        pair(
+                                            "auth-client", mutableMapOf(
+                                                Pair("authorization-grant-type", "client_credentials"),
+                                                Pair("client-id", "auth-client"),
+                                                Pair("client-secret", "secret"),
+                                                Pair("scope", "internal"),
+                                                Pair("client-name", "auth-client")
+                                            )
+                                        )
+                                    )
+                                ),
+                                Pair(
                                     "provider",
-                                    pair("auth-client", pair("token-uri", "http://192.168.100.18:${it["port"] ?: 8080}"))
+                                    pair(
+                                        "auth-client",
+                                        pair("token-uri", "http://192.168.100.18:${it["port"] ?: 8080}")
+                                    )
+                                )
                             )
-                    ))))
+                        )
+                    )
+                )
             )
             mapConfig["clients"] = registerClient()
             YAMLMapper().writeValue(File(configRunningPath), mapConfig)
@@ -72,13 +87,13 @@ object U {
             val cMap = ci["clients"] as ArrayList<Map<String, Any>>
             val client: List<Clients> = cMap.map {
                 Clients(
-                        (it["client-id"] ?: it["clientId"]).toString(),
-                        (it["client-secret"] ?: it["clientSecret"]).toString(),
-                        (it["authorization-grant-types"] ?: it["authorizationGrantTypes"]) as List<String>,
-                        it["scopes"] as List<String>,
-                        (it["access-token-expired"] ?: it["accessTokenExpired"]).toString().toLong(),
-                        (it["refresh-token-expired"] ?: it["refreshTokenExpired"]).toString().toLong(),
-                        (it["redirect-url"] ?: it["redirectUrl"]).toString()
+                    (it["client-id"] ?: it["clientId"]).toString(),
+                    (it["client-secret"] ?: it["clientSecret"]).toString(),
+                    (it["authorization-grant-types"] ?: it["authorizationGrantTypes"]) as List<String>,
+                    it["scopes"] as List<String>,
+                    (it["access-token-expired"] ?: it["accessTokenExpired"]).toString().toLong(),
+                    (it["refresh-token-expired"] ?: it["refreshTokenExpired"]).toString().toLong(),
+                    (it["redirect-url"] ?: it["redirectUrl"]).toString()
                 )
             }.toList()
             client.toMutableList()
@@ -103,22 +118,10 @@ object U {
         } ?: "http://192.168.100.18:8080"
     }
 
-    @Synchronized
-    fun loadToken(): String {
-        val clientAuth = registerClient().first()
-        val resp = Unirest.post("$authUrl/oauth2/token")
-                .basicAuth(clientAuth.clientId, clientAuth.clientSecret)
-                .field("grant_type", clientAuth.authorizationGrantTypes)
-                .asJson().ifFailure {
-                    logger.info("load token failed")
-                }
-        return resp.body.`object`["access_token"].toString()
-    }
-
 }
 
 class Clients(
-        val clientId: String, val clientSecret: String, val authorizationGrantTypes: List<String>,
-        val scopes: List<String>, val accessTokenExpired: Long, val refreshTokenExpired: Long,
-        var redirectUrl: String?
+    val clientId: String, val clientSecret: String, val authorizationGrantTypes: List<String>,
+    val scopes: List<String>, val accessTokenExpired: Long, val refreshTokenExpired: Long,
+    var redirectUrl: String?
 )
