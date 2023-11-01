@@ -12,7 +12,6 @@ class EventListeners() {
     fun onAppReady() {
         val logger = LoggerFactory.getLogger(OauthApplication::class.java)
         logger.info("application is ready")
-        logger.info("client registered")
     }
 
 }

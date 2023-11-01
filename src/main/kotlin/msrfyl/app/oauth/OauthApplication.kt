@@ -9,7 +9,12 @@ import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
+import org.springframework.web.context.request.RequestContextHolder
+import org.springframework.web.context.request.ServletRequestAttributes
+import java.io.File
+import java.io.OutputStream
 import javax.servlet.http.HttpServletRequest
+import javax.servlet.http.HttpServletResponse
 
 @SpringBootApplication
 class OauthApplication
@@ -42,12 +47,12 @@ class LoginController {
         return "login"
     }
 
-//    @GetMapping("/bg")
-//    fun bg(response: HttpServletResponse) {
-//        response.contentType = "image/jpg"
-//        val file = File("bg.jpg")
-//        val outputStream: OutputStream = response.outputStream
-//        outputStream.write(file.readBytes())
-//    }
+    @GetMapping("/bg")
+    fun bg(response: HttpServletResponse) {
+        response.contentType = "image/jpg"
+        val file = File("bg.jpg")
+        val outputStream: OutputStream = response.outputStream
+        outputStream.write(file.readBytes())
+    }
 
 }

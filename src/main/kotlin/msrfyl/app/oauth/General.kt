@@ -20,7 +20,7 @@ class UInterceptor : Interceptor {
     @Synchronized
     fun loadToken(): String {
         val clientAuth = U.registerClient().first()
-        val resp = Unirest.post("${U.authUrl}/oauth2/token")
+        val resp = Unirest.post("${U.getAuth.url}/oauth2/token")
             .basicAuth(clientAuth.clientId, clientAuth.clientSecret)
             .field("grant_type", clientAuth.authorizationGrantTypes)
             .asJson().ifFailure {

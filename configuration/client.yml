@@ -1,0 +1,21 @@
+clients:
+  - client-id: auth-client
+    client-secret: auth-secret
+    authorization-grant-types:
+      - client_credentials
+    scopes:
+      - internal
+      - authenticate
+    access-token-expired: 30000
+    refresh-token-expired: 1234000
+  - client-id: msrfyl-client
+    client-secret: msrfyl-secret
+    authorization-grant-types:
+      - authorization_code
+      - refresh_token
+    scopes:
+      - user.manage
+      - user.read
+    access-token-expired: 30000
+    refresh-token-expired: 1234000
+    redirect-url: https://oauth.pstmn.io/v1/callback

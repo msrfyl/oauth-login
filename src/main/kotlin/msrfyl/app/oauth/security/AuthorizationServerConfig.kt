@@ -122,16 +122,10 @@ class AuthorizationServerConfig {
         return keyPair
     }
 
-    //    @Bean
-//    fun authorizationServerSettings(): AuthorizationServerSettings {
-//        return AuthorizationServerSettings.builder()
-//            .issuer(U.authUrl)
-//            .build()
-//    }
     @Bean
     fun providerSettings(): ProviderSettings? {
         return ProviderSettings.builder()
-            .issuer(U.authUrl)
+            .issuer(U.getAuth.url)
             .build()
     }
 
@@ -143,7 +137,7 @@ class AuthorizationServerConfig {
                 && OAuth2TokenType.ACCESS_TOKEN == context.tokenType
             ) {
                 val principal: Authentication = context.getPrincipal()
-                val res: HttpResponse<Map<*, *>> = U.accessClient.post("${U.clientUrl}/api/tokenData")
+                val res: HttpResponse<Map<*, *>> = U.accessClient.post("${U.getResource.url}/api/tokenData")
                     .field("username", principal.name)
                     .asObject(Map::class.java)
                 res.body.entries.forEach {

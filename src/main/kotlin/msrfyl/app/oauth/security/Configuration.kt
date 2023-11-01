@@ -1,5 +1,6 @@
 package msrfyl.app.oauth.security
 
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import msrfyl.app.oauth.U
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
@@ -13,6 +14,9 @@ import org.springframework.security.core.Authentication
 import org.springframework.security.core.AuthenticationException
 import org.springframework.security.web.SecurityFilterChain
 import org.springframework.stereotype.Component
+import org.springframework.web.context.request.RequestContextHolder
+import org.springframework.web.context.request.ServletRequestAttributes
+
 
 @EnableWebSecurity
 class DefaultSecurityConfig {
@@ -42,7 +46,7 @@ class MyAuthProvider : AuthenticationProvider {
     override fun authenticate(authentication: Authentication): Authentication? {
         val name: String = authentication.name
         val password: String = authentication.credentials.toString()
-        val urlApi = "${U.clientUrl}/api/authenticate"
+        val urlApi = "${U.getResource.url}/api/authenticate"
         val res = U.accessClient.post(urlApi)
             .field("username", name)
             .field("password", password)
