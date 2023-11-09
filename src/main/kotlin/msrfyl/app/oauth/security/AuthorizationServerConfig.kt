@@ -27,8 +27,12 @@ import org.springframework.security.oauth2.server.authorization.client.Registere
 import org.springframework.security.oauth2.server.authorization.config.ProviderSettings
 import org.springframework.security.oauth2.server.authorization.config.TokenSettings
 import org.springframework.security.web.SecurityFilterChain
+import org.springframework.stereotype.Component
 import org.springframework.web.context.request.RequestContextHolder
 import org.springframework.web.context.request.ServletRequestAttributes
+import org.springframework.web.cors.CorsConfiguration
+import org.springframework.web.cors.CorsConfigurationSource
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource
 import java.io.IOException
 import java.security.KeyPair
 import java.security.KeyPairGenerator
@@ -52,7 +56,7 @@ class AuthorizationServerConfig {
     @Bean
     @Order(Ordered.HIGHEST_PRECEDENCE)
     @Throws(Exception::class)
-    fun authServerSecurityFilterChain(http: HttpSecurity): SecurityFilterChain? {
+    fun authServerSecurityFilterChain(http: HttpSecurity): SecurityFilterChain {
         OAuth2AuthorizationServerConfiguration.applyDefaultSecurity(http)
         http.formLogin { it.loginPage("/login") }
         http.sessionManagement { it.sessionCreationPolicy(SessionCreationPolicy.NEVER) }
@@ -156,30 +160,20 @@ class AuthorizationServerConfig {
 
 }
 
-@Configuration
-@Order(Ordered.HIGHEST_PRECEDENCE)
-class SimpleCORSFilter : Filter {
-    @Throws(ServletException::class)
-    override fun init(fc: FilterConfig?) {
-    }
-
-    @Throws(IOException::class, ServletException::class)
-    override fun doFilter(req: ServletRequest, resp: ServletResponse, chain: FilterChain) {
-        val response = resp as HttpServletResponse
-        val request = req as HttpServletRequest
-        response.setHeader("Access-Control-Allow-Origin", "*")
-        response.setHeader("Access-Control-Allow-Methods", "PATCH,PUT,POST,GET,OPTIONS,DELETE")
-        response.setHeader("Access-Control-Max-Age", "3600")
-        response.setHeader(
-            "Access-Control-Allow-Headers",
-            "x-requested-with, authorization, Content-Type, Authorization, credential, X-XSRF-TOKEN"
-        )
-        if ("OPTIONS".equals(request.method, ignoreCase = true)) {
-            response.status = HttpServletResponse.SC_OK
-        } else {
-            chain.doFilter(req, resp)
-        }
-    }
-
-    override fun destroy() {}
-}
+//@Component
+//@Order(Ordered.HIGHEST_PRECEDENCE)
+//class FilterAccess () : Filter {
+//    override fun doFilter(sreq: ServletRequest, sres: ServletResponse, fc: FilterChain) {
+//        val request = sreq as HttpServletRequest
+//        val response = sres as HttpServletResponse
+//        response.setHeader("Access-Control-Allow-Origin", "*")
+//        response.setHeader("Access-Control-Allow-Methods", "PATCH,PUT,POST,GET,OPTIONS,DELETE")
+//        response.setHeader("Access-Control-Max-Age", "3600")
+//        response.setHeader(
+//            "Access-Control-Allow-Headers",
+//            "x-requested-with, authorization, Content-Type, Authorization, credential, X-XSRF-TOKEN"
+//        )
+//        fc.doFilter(request, response)
+//    }
+//
+//}

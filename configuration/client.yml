@@ -8,6 +8,17 @@ clients:
       - authenticate
     access-token-expired: 30000
     refresh-token-expired: 1234000
+  - client-id: giats-client
+    client-secret: giats-secret
+    authorization-grant-types:
+      - authorization_code
+      - refresh_token
+    scopes:
+      - user.manage
+      - user.read
+    access-token-expired: 30000
+    refresh-token-expired: 1234000
+    redirect-url: http://localhost:4200/oauth/callback
   - client-id: msrfyl-client
     client-secret: msrfyl-secret
     authorization-grant-types:

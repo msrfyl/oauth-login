@@ -5,6 +5,9 @@ import msrfyl.app.oauth.U
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Configuration
+import org.springframework.core.Ordered
+import org.springframework.core.annotation.Order
 import org.springframework.security.authentication.AuthenticationProvider
 import org.springframework.security.authentication.BadCredentialsException
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
@@ -14,8 +17,18 @@ import org.springframework.security.core.Authentication
 import org.springframework.security.core.AuthenticationException
 import org.springframework.security.web.SecurityFilterChain
 import org.springframework.stereotype.Component
-import org.springframework.web.context.request.RequestContextHolder
-import org.springframework.web.context.request.ServletRequestAttributes
+import org.springframework.web.cors.CorsConfiguration
+import org.springframework.web.cors.CorsConfigurationSource
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource
+import java.io.IOException
+import javax.servlet.Filter
+import javax.servlet.FilterChain
+import javax.servlet.FilterConfig
+import javax.servlet.ServletException
+import javax.servlet.ServletRequest
+import javax.servlet.ServletResponse
+import javax.servlet.http.HttpServletRequest
+import javax.servlet.http.HttpServletResponse
 
 
 @EnableWebSecurity
@@ -67,4 +80,32 @@ class MyAuthProvider : AuthenticationProvider {
         return authentication == UsernamePasswordAuthenticationToken::class.java
     }
 
+}
+
+@Configuration
+@Order(Ordered.HIGHEST_PRECEDENCE)
+class SimpleCORSFilter : Filter {
+    @Throws(ServletException::class)
+    override fun init(fc: FilterConfig) {
+    }
+
+    @Throws(IOException::class, ServletException::class)
+    override fun doFilter(req: ServletRequest, resp: ServletResponse, chain: FilterChain) {
+        val response = resp as HttpServletResponse
+        val request = req as HttpServletRequest
+        response.setHeader("Access-Control-Allow-Origin", "*")
+        response.setHeader("Access-Control-Allow-Methods", "PATCH,PUT,POST,GET,OPTIONS,DELETE")
+        response.setHeader("Access-Control-Max-Age", "3600")
+        response.setHeader(
+            "Access-Control-Allow-Headers",
+            "x-requested-with, authorization, Content-Type, Authorization, credential, X-XSRF-TOKEN"
+        )
+        if ("OPTIONS".equals(request.method, ignoreCase = true)) {
+            response.status = HttpServletResponse.SC_OK
+        } else {
+            chain.doFilter(req, resp)
+        }
+    }
+
+    override fun destroy() {}
 }
