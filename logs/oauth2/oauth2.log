@@ -1,0 +1,457 @@
+2023-12-14 08:57:42.062  INFO 18732 --- [main] msrfyl.app.oauth.OauthApplicationKt      : Starting OauthApplicationKt using Java 17.0.6 on DESKTOP-9ND0UED with PID 18732 (D:\Msrfyl\coding\oauth\target\classes started by Datacom Backend in D:\Msrfyl\coding\oauth)
+2023-12-14 08:57:42.074  INFO 18732 --- [main] msrfyl.app.oauth.OauthApplicationKt      : No active profile set, falling back to 1 default profile: "default"
+2023-12-14 08:57:46.627  INFO 18732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2023-12-14 08:57:46.647  INFO 18732 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-14 08:57:46.648  INFO 18732 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2023-12-14 08:57:46.991  INFO 18732 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-14 08:57:46.991  INFO 18732 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4755 ms
+2023-12-14 08:57:47.617  INFO 18732 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: auth-client
+2023-12-14 08:57:47.642  INFO 18732 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: giats-client
+2023-12-14 08:57:47.643  INFO 18732 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: msrfyl-client
+2023-12-14 08:57:48.682  INFO 18732 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure org.springframework.security.config.annotation.web.configurers.oauth2.server.authorization.OAuth2AuthorizationServerConfigurer$$Lambda$560/0x000000080105afe0@713a35c5 with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62aeddc8, org.springframework.security.web.context.SecurityContextPersistenceFilter@29896529, org.springframework.security.web.header.HeaderWriterFilter@6a15b73, org.springframework.security.web.csrf.CsrfFilter@5b202ff, org.springframework.security.web.authentication.logout.LogoutFilter@738d37fc, org.springframework.security.oauth2.server.authorization.web.OAuth2AuthorizationEndpointFilter@2ac519dc, org.springframework.security.oauth2.server.authorization.oidc.web.OidcProviderConfigurationEndpointFilter@6f31df32, org.springframework.security.oauth2.server.authorization.web.NimbusJwkSetEndpointFilter@2dafae61, org.springframework.security.oauth2.server.authorization.web.OAuth2AuthorizationServerMetadataEndpointFilter@519c6fcc, org.springframework.security.oauth2.server.authorization.web.OAuth2ClientAuthenticationFilter@3fde8f7c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6ad1701a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41b64020, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a538ed8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11787b64, org.springframework.security.web.session.SessionManagementFilter@15fb4566, org.springframework.security.web.access.ExceptionTranslationFilter@77f4c040, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@18d11527, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenEndpointFilter@193bb809, org.springframework.security.oauth2.server.authorization.oidc.web.OidcUserInfoEndpointFilter@2c26ba07, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenIntrospectionEndpointFilter@7e7743ec, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenRevocationEndpointFilter@50110971]
+2023-12-14 08:57:48.750  INFO 18732 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d4f5506, org.springframework.security.web.context.SecurityContextPersistenceFilter@459003a0, org.springframework.security.web.header.HeaderWriterFilter@245253d8, org.springframework.security.web.csrf.CsrfFilter@385dfb63, org.springframework.security.web.authentication.logout.LogoutFilter@67fb5025, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@79b18230, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d325518, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b481bf5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7dee835, org.springframework.security.web.session.SessionManagementFilter@12417468, org.springframework.security.web.access.ExceptionTranslationFilter@364fd4ae, org.springframework.security.web.access.intercept.AuthorizationFilter@18a096b5]
+2023-12-14 08:57:49.935  INFO 18732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2023-12-14 08:57:49.958  INFO 18732 --- [main] msrfyl.app.oauth.OauthApplicationKt      : Started OauthApplicationKt in 9.341 seconds (JVM running for 12.247)
+2023-12-14 08:57:49.966  INFO 18732 --- [main] msrfyl.app.oauth.OauthApplication        : application is ready
+2023-12-14 09:01:17.120  INFO 18732 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 09:01:17.128  INFO 18732 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-14 09:01:17.132  INFO 18732 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-12-14 09:01:31.103  INFO 18732 --- [http-nio-9000-exec-6] m.app.oauth.security.MyAuthProvider      : authenticate user user-msrfyl [200]
+2023-12-14 09:01:31.106  INFO 18732 --- [http-nio-9000-exec-6] m.app.oauth.security.MyAuthProvider      : success login msrfyl
+2023-12-14 09:01:39.097 ERROR 18732 --- [http-nio-9000-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Java 8 date/time type `java.time.Duration` not supported by default: add Module "com.fasterxml.jackson.datatype:jackson-datatype-jsr310" to enable handling (through reference chain: org.springframework.security.oauth2.server.authorization.client.RegisteredClient["tokenSettings"]->org.springframework.security.oauth2.server.authorization.config.TokenSettings["settings"]->java.util.Collections$UnmodifiableMap["settings.token.access-token-time-to-live"])
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1300) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.impl.UnsupportedTypeSerializer.serialize(UnsupportedTypeSerializer.java:35) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serializeFields(MapSerializer.java:808) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serializeWithoutTypeInfo(MapSerializer.java:764) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serialize(MapSerializer.java:720) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serialize(MapSerializer.java:35) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:728) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:774) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:728) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:774) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:480) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:319) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ObjectMapper._writeValueAndClose(ObjectMapper.java:4568) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ObjectMapper.writeValueAsString(ObjectMapper.java:3821) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at msrfyl.app.oauth.security.AuthorizationServerConfig.jwtCustomizer$lambda$9(AuthorizationServerConfig.kt:145) ~[classes/:na]
+	at org.springframework.security.oauth2.server.authorization.authentication.OAuth2AuthorizationCodeAuthenticationProvider.authenticate(OAuth2AuthorizationCodeAuthenticationProvider.java:191) ~[spring-security-oauth2-authorization-server-0.2.1.jar:0.2.1]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182) ~[spring-security-core-5.6.3.jar:5.6.3]
+	at org.springframework.security.oauth2.server.authorization.web.OAuth2TokenEndpointFilter.doFilterInternal(OAuth2TokenEndpointFilter.java:165) ~[spring-security-oauth2-authorization-server-0.2.1.jar:0.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:219) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:213) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.oauth2.server.authorization.web.OAuth2ClientAuthenticationFilter.doFilterInternal(OAuth2ClientAuthenticationFilter.java:113) ~[spring-security-oauth2-authorization-server-0.2.1.jar:0.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.oauth2.server.authorization.web.OAuth2AuthorizationServerMetadataEndpointFilter.doFilterInternal(OAuth2AuthorizationServerMetadataEndpointFilter.java:76) ~[spring-security-oauth2-authorization-server-0.2.1.jar:0.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.oauth2.server.authorization.web.NimbusJwkSetEndpointFilter.doFilterInternal(NimbusJwkSetEndpointFilter.java:85) ~[spring-security-oauth2-authorization-server-0.2.1.jar:0.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.oauth2.server.authorization.oidc.web.OidcProviderConfigurationEndpointFilter.doFilterInternal(OidcProviderConfigurationEndpointFilter.java:75) ~[spring-security-oauth2-authorization-server-0.2.1.jar:0.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.oauth2.server.authorization.web.OAuth2AuthorizationEndpointFilter.doFilterInternal(OAuth2AuthorizationEndpointFilter.java:140) ~[spring-security-oauth2-authorization-server-0.2.1.jar:0.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at msrfyl.app.oauth.security.SimpleCORSFilter.doFilter(Configuration.kt:101) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-12-14 09:06:35.042  INFO 18620 --- [main] msrfyl.app.oauth.OauthApplicationKt      : Starting OauthApplicationKt using Java 17.0.6 on DESKTOP-9ND0UED with PID 18620 (D:\Msrfyl\coding\oauth\target\classes started by Datacom Backend in D:\Msrfyl\coding\oauth)
+2023-12-14 09:06:35.046  INFO 18620 --- [main] msrfyl.app.oauth.OauthApplicationKt      : No active profile set, falling back to 1 default profile: "default"
+2023-12-14 09:06:38.859  INFO 18620 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2023-12-14 09:06:38.875  INFO 18620 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-14 09:06:38.876  INFO 18620 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2023-12-14 09:06:39.126  INFO 18620 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-14 09:06:39.126  INFO 18620 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3861 ms
+2023-12-14 09:06:39.589  INFO 18620 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: auth-client
+2023-12-14 09:06:39.600  INFO 18620 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: giats-client
+2023-12-14 09:06:39.602  INFO 18620 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: msrfyl-client
+2023-12-14 09:06:40.542  INFO 18620 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure org.springframework.security.config.annotation.web.configurers.oauth2.server.authorization.OAuth2AuthorizationServerConfigurer$$Lambda$560/0x0000000801052180@202d9236 with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f782c05, org.springframework.security.web.context.SecurityContextPersistenceFilter@2173a742, org.springframework.security.web.header.HeaderWriterFilter@9687f55, org.springframework.security.web.csrf.CsrfFilter@134f8ef6, org.springframework.security.web.authentication.logout.LogoutFilter@65514add, org.springframework.security.oauth2.server.authorization.web.OAuth2AuthorizationEndpointFilter@38d80d65, org.springframework.security.oauth2.server.authorization.oidc.web.OidcProviderConfigurationEndpointFilter@2b736fee, org.springframework.security.oauth2.server.authorization.web.NimbusJwkSetEndpointFilter@6661d8c0, org.springframework.security.oauth2.server.authorization.web.OAuth2AuthorizationServerMetadataEndpointFilter@41bfa9e9, org.springframework.security.oauth2.server.authorization.web.OAuth2ClientAuthenticationFilter@1c34365c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@68b7d0ef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7f6329cb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b8137c5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d6ac396, org.springframework.security.web.session.SessionManagementFilter@671d03bb, org.springframework.security.web.access.ExceptionTranslationFilter@208205ed, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5f0bab7e, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenEndpointFilter@7126e26, org.springframework.security.oauth2.server.authorization.oidc.web.OidcUserInfoEndpointFilter@411cd156, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenIntrospectionEndpointFilter@552cede7, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenRevocationEndpointFilter@19e21f89]
+2023-12-14 09:06:40.611  INFO 18620 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b481bf5, org.springframework.security.web.context.SecurityContextPersistenceFilter@16f0ec18, org.springframework.security.web.header.HeaderWriterFilter@525b1b70, org.springframework.security.web.csrf.CsrfFilter@570ba13, org.springframework.security.web.authentication.logout.LogoutFilter@623e0631, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@d325518, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6c977dcf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@661d6bb6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2233cac0, org.springframework.security.web.session.SessionManagementFilter@16d07cf3, org.springframework.security.web.access.ExceptionTranslationFilter@37a9b687, org.springframework.security.web.access.intercept.AuthorizationFilter@459003a0]
+2023-12-14 09:06:41.575  INFO 18620 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2023-12-14 09:06:41.602  INFO 18620 --- [main] msrfyl.app.oauth.OauthApplicationKt      : Started OauthApplicationKt in 8.002 seconds (JVM running for 10.103)
+2023-12-14 09:06:41.622  INFO 18620 --- [main] msrfyl.app.oauth.OauthApplication        : application is ready
+2023-12-14 09:06:53.547  INFO 18620 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 09:06:53.547  INFO 18620 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-14 09:06:53.549  INFO 18620 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-12-14 09:07:03.480  INFO 18620 --- [http-nio-9000-exec-6] m.app.oauth.security.MyAuthProvider      : authenticate user user-msrfyl [200]
+2023-12-14 09:07:03.481  INFO 18620 --- [http-nio-9000-exec-6] m.app.oauth.security.MyAuthProvider      : success login msrfyl
+2023-12-14 09:09:34.670  INFO 716 --- [main] msrfyl.app.oauth.OauthApplicationKt      : Starting OauthApplicationKt using Java 17.0.6 on DESKTOP-9ND0UED with PID 716 (D:\Msrfyl\coding\oauth\target\classes started by Datacom Backend in D:\Msrfyl\coding\oauth)
+2023-12-14 09:09:34.675  INFO 716 --- [main] msrfyl.app.oauth.OauthApplicationKt      : No active profile set, falling back to 1 default profile: "default"
+2023-12-14 09:09:40.474  INFO 716 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2023-12-14 09:09:40.501  INFO 716 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-14 09:09:40.502  INFO 716 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2023-12-14 09:09:40.828  INFO 716 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-14 09:09:40.829  INFO 716 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5904 ms
+2023-12-14 09:09:41.378  INFO 716 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: auth-client
+2023-12-14 09:09:41.392  INFO 716 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: giats-client
+2023-12-14 09:09:41.394  INFO 716 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: msrfyl-client
+2023-12-14 09:09:42.466  INFO 716 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure org.springframework.security.config.annotation.web.configurers.oauth2.server.authorization.OAuth2AuthorizationServerConfigurer$$Lambda$560/0x0000000801052600@764b14b8 with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@202d9236, org.springframework.security.web.context.SecurityContextPersistenceFilter@6babffb5, org.springframework.security.web.header.HeaderWriterFilter@73afe2b7, org.springframework.security.web.csrf.CsrfFilter@ea04cab, org.springframework.security.web.authentication.logout.LogoutFilter@31973858, org.springframework.security.oauth2.server.authorization.web.OAuth2AuthorizationEndpointFilter@691124ee, org.springframework.security.oauth2.server.authorization.oidc.web.OidcProviderConfigurationEndpointFilter@c8f97a7, org.springframework.security.oauth2.server.authorization.web.NimbusJwkSetEndpointFilter@17d2b075, org.springframework.security.oauth2.server.authorization.web.OAuth2AuthorizationServerMetadataEndpointFilter@3421debd, org.springframework.security.oauth2.server.authorization.web.OAuth2ClientAuthenticationFilter@5042e3d0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@41bfa9e9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@706ceca6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f6329cb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f782c05, org.springframework.security.web.session.SessionManagementFilter@5700c9db, org.springframework.security.web.access.ExceptionTranslationFilter@22bf9122, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7d8cf9ac, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenEndpointFilter@47b33e07, org.springframework.security.oauth2.server.authorization.oidc.web.OidcUserInfoEndpointFilter@4e22368c, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenIntrospectionEndpointFilter@1c8f6c66, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenRevocationEndpointFilter@feb098f]
+2023-12-14 09:09:42.575  INFO 716 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@d325518, org.springframework.security.web.context.SecurityContextPersistenceFilter@16d07cf3, org.springframework.security.web.header.HeaderWriterFilter@37a9b687, org.springframework.security.web.csrf.CsrfFilter@27dc627a, org.springframework.security.web.authentication.logout.LogoutFilter@733fb462, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@459003a0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16f0ec18, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c977dcf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b481bf5, org.springframework.security.web.session.SessionManagementFilter@525b1b70, org.springframework.security.web.access.ExceptionTranslationFilter@570ba13, org.springframework.security.web.access.intercept.AuthorizationFilter@12417468]
+2023-12-14 09:09:43.911  INFO 716 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2023-12-14 09:09:43.959  INFO 716 --- [main] msrfyl.app.oauth.OauthApplicationKt      : Started OauthApplicationKt in 11.016 seconds (JVM running for 13.712)
+2023-12-14 09:09:43.966  INFO 716 --- [main] msrfyl.app.oauth.OauthApplication        : application is ready
+2023-12-14 09:10:18.795  INFO 716 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 09:10:18.796  INFO 716 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-14 09:10:18.802  INFO 716 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-12-14 09:10:28.383  INFO 716 --- [http-nio-9000-exec-6] m.app.oauth.security.MyAuthProvider      : authenticate user user-msrfyl [200]
+2023-12-14 09:10:28.384  INFO 716 --- [http-nio-9000-exec-6] m.app.oauth.security.MyAuthProvider      : success login msrfyl
+2023-12-14 09:15:06.282  INFO 15372 --- [main] msrfyl.app.oauth.OauthApplicationKt      : Starting OauthApplicationKt using Java 17.0.6 on DESKTOP-9ND0UED with PID 15372 (D:\Msrfyl\coding\oauth\target\classes started by Datacom Backend in D:\Msrfyl\coding\oauth)
+2023-12-14 09:15:06.286  INFO 15372 --- [main] msrfyl.app.oauth.OauthApplicationKt      : No active profile set, falling back to 1 default profile: "default"
+2023-12-14 09:15:10.789  INFO 15372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2023-12-14 09:15:10.814  INFO 15372 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-14 09:15:10.815  INFO 15372 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2023-12-14 09:15:11.135  INFO 15372 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-14 09:15:11.136  INFO 15372 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4703 ms
+2023-12-14 09:15:11.691  INFO 15372 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: auth-client
+2023-12-14 09:15:11.767  INFO 15372 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: giats-client
+2023-12-14 09:15:11.769  INFO 15372 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: msrfyl-client
+2023-12-14 09:15:12.804  INFO 15372 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure org.springframework.security.config.annotation.web.configurers.oauth2.server.authorization.OAuth2AuthorizationServerConfigurer$$Lambda$560/0x0000000801052828@6b5ab2f2 with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@315c081, org.springframework.security.web.context.SecurityContextPersistenceFilter@1039bfc4, org.springframework.security.web.header.HeaderWriterFilter@66fbc5e7, org.springframework.security.web.csrf.CsrfFilter@c02670f, org.springframework.security.web.authentication.logout.LogoutFilter@4b8137c5, org.springframework.security.oauth2.server.authorization.web.OAuth2AuthorizationEndpointFilter@2f20f7ad, org.springframework.security.oauth2.server.authorization.oidc.web.OidcProviderConfigurationEndpointFilter@5f0a2638, org.springframework.security.oauth2.server.authorization.web.NimbusJwkSetEndpointFilter@1c8f6c66, org.springframework.security.oauth2.server.authorization.web.OAuth2AuthorizationServerMetadataEndpointFilter@50110971, org.springframework.security.oauth2.server.authorization.web.OAuth2ClientAuthenticationFilter@7f4596d0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@17d2b075, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1fd7a37, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b202ff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b2dd3df, org.springframework.security.web.session.SessionManagementFilter@52559a69, org.springframework.security.web.access.ExceptionTranslationFilter@5a90265a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@15a3b42, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenEndpointFilter@33d60b7e, org.springframework.security.oauth2.server.authorization.oidc.web.OidcUserInfoEndpointFilter@f2276c9, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenIntrospectionEndpointFilter@3249e278, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenRevocationEndpointFilter@2047981]
+2023-12-14 09:15:12.869  INFO 15372 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@401c4250, org.springframework.security.web.context.SecurityContextPersistenceFilter@322204dc, org.springframework.security.web.header.HeaderWriterFilter@168ad26f, org.springframework.security.web.csrf.CsrfFilter@28babeca, org.springframework.security.web.authentication.logout.LogoutFilter@55acec99, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3f8dfe74, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@656a3d6b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@25b38203, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a950fdd, org.springframework.security.web.session.SessionManagementFilter@4f93bf0a, org.springframework.security.web.access.ExceptionTranslationFilter@1ad9b8d3, org.springframework.security.web.access.intercept.AuthorizationFilter@2519026b]
+2023-12-14 09:15:14.349  INFO 15372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2023-12-14 09:15:14.381  INFO 15372 --- [main] msrfyl.app.oauth.OauthApplicationKt      : Started OauthApplicationKt in 9.31 seconds (JVM running for 11.345)
+2023-12-14 09:15:14.391  INFO 15372 --- [main] msrfyl.app.oauth.OauthApplication        : application is ready
+2023-12-14 09:16:19.819  INFO 15372 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 09:16:19.819  INFO 15372 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-14 09:16:19.823  INFO 15372 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-12-14 09:16:29.108  INFO 15372 --- [http-nio-9000-exec-6] m.a.o.s.AuthorizationServerConfig        : register client: auth-client
+2023-12-14 09:16:29.109  INFO 15372 --- [http-nio-9000-exec-6] m.a.o.s.AuthorizationServerConfig        : register client: giats-client
+2023-12-14 09:16:29.114  INFO 15372 --- [http-nio-9000-exec-6] m.a.o.s.AuthorizationServerConfig        : register client: msrfyl-client
+2023-12-14 09:16:29.125 ERROR 15372 --- [http-nio-9000-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.springframework.security.oauth2.server.authorization.client.InMemoryRegisteredClientRepository and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS)
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1300) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:400) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:46) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:29) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:480) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:319) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ObjectMapper._writeValueAndClose(ObjectMapper.java:4568) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ObjectMapper.writeValueAsString(ObjectMapper.java:3821) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at msrfyl.app.oauth.security.MyAuthProvider.authenticate(Configuration.kt:56) ~[classes/:na]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182) ~[spring-security-core-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:85) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:223) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:213) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:132) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at msrfyl.app.oauth.security.SimpleCORSFilter.doFilter(Configuration.kt:106) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-12-14 09:17:21.928  INFO 3800 --- [main] msrfyl.app.oauth.OauthApplicationKt      : Starting OauthApplicationKt using Java 17.0.6 on DESKTOP-9ND0UED with PID 3800 (D:\Msrfyl\coding\oauth\target\classes started by Datacom Backend in D:\Msrfyl\coding\oauth)
+2023-12-14 09:17:21.933  INFO 3800 --- [main] msrfyl.app.oauth.OauthApplicationKt      : No active profile set, falling back to 1 default profile: "default"
+2023-12-14 09:17:26.063  INFO 3800 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2023-12-14 09:17:26.083  INFO 3800 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-14 09:17:26.083  INFO 3800 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2023-12-14 09:17:26.413  INFO 3800 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-14 09:17:26.414  INFO 3800 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4296 ms
+2023-12-14 09:17:27.045  INFO 3800 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: auth-client
+2023-12-14 09:17:27.055  INFO 3800 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: giats-client
+2023-12-14 09:17:27.057  INFO 3800 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: msrfyl-client
+2023-12-14 09:17:28.251  INFO 3800 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure org.springframework.security.config.annotation.web.configurers.oauth2.server.authorization.OAuth2AuthorizationServerConfigurer$$Lambda$560/0x00000008010537f8@764b14b8 with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@202d9236, org.springframework.security.web.context.SecurityContextPersistenceFilter@6babffb5, org.springframework.security.web.header.HeaderWriterFilter@73afe2b7, org.springframework.security.web.csrf.CsrfFilter@ea04cab, org.springframework.security.web.authentication.logout.LogoutFilter@31973858, org.springframework.security.oauth2.server.authorization.web.OAuth2AuthorizationEndpointFilter@691124ee, org.springframework.security.oauth2.server.authorization.oidc.web.OidcProviderConfigurationEndpointFilter@c8f97a7, org.springframework.security.oauth2.server.authorization.web.NimbusJwkSetEndpointFilter@17d2b075, org.springframework.security.oauth2.server.authorization.web.OAuth2AuthorizationServerMetadataEndpointFilter@3421debd, org.springframework.security.oauth2.server.authorization.web.OAuth2ClientAuthenticationFilter@5042e3d0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@41bfa9e9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@706ceca6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f6329cb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f782c05, org.springframework.security.web.session.SessionManagementFilter@5700c9db, org.springframework.security.web.access.ExceptionTranslationFilter@22bf9122, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7d8cf9ac, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenEndpointFilter@47b33e07, org.springframework.security.oauth2.server.authorization.oidc.web.OidcUserInfoEndpointFilter@4e22368c, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenIntrospectionEndpointFilter@1c8f6c66, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenRevocationEndpointFilter@feb098f]
+2023-12-14 09:17:28.350  INFO 3800 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e0cc334, org.springframework.security.web.context.SecurityContextPersistenceFilter@388c519, org.springframework.security.web.header.HeaderWriterFilter@7b53b1ad, org.springframework.security.web.csrf.CsrfFilter@21e45a6f, org.springframework.security.web.authentication.logout.LogoutFilter@3a38f122, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7bee8621, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7fbd3e75, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@198536f6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e12a5a6, org.springframework.security.web.session.SessionManagementFilter@3cc053, org.springframework.security.web.access.ExceptionTranslationFilter@1a1ccaaf, org.springframework.security.web.access.intercept.AuthorizationFilter@51d0ec6f]
+2023-12-14 09:17:29.656  INFO 3800 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2023-12-14 09:17:29.688  INFO 3800 --- [main] msrfyl.app.oauth.OauthApplicationKt      : Started OauthApplicationKt in 9.046 seconds (JVM running for 11.304)
+2023-12-14 09:17:29.702  INFO 3800 --- [main] msrfyl.app.oauth.OauthApplication        : application is ready
+2023-12-14 09:18:16.636  INFO 3800 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 09:18:16.637  INFO 3800 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-14 09:18:16.639  INFO 3800 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-14 09:18:29.969  INFO 3800 --- [http-nio-9000-exec-9] m.app.oauth.security.MyAuthProvider      : authenticate user user-msrfyl [200]
+2023-12-14 09:18:29.969  INFO 3800 --- [http-nio-9000-exec-9] m.app.oauth.security.MyAuthProvider      : success login msrfyl
+2023-12-14 09:19:51.055  INFO 19336 --- [main] msrfyl.app.oauth.OauthApplicationKt      : Starting OauthApplicationKt using Java 17.0.6 on DESKTOP-9ND0UED with PID 19336 (D:\Msrfyl\coding\oauth\target\classes started by Datacom Backend in D:\Msrfyl\coding\oauth)
+2023-12-14 09:19:51.063  INFO 19336 --- [main] msrfyl.app.oauth.OauthApplicationKt      : No active profile set, falling back to 1 default profile: "default"
+2023-12-14 09:19:58.259  INFO 19336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2023-12-14 09:19:58.290  INFO 19336 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-14 09:19:58.291  INFO 19336 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2023-12-14 09:19:58.804  INFO 19336 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-14 09:19:58.805  INFO 19336 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7485 ms
+2023-12-14 09:20:00.801  INFO 19336 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: auth-client
+2023-12-14 09:20:00.832  INFO 19336 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: giats-client
+2023-12-14 09:20:00.833  INFO 19336 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: msrfyl-client
+2023-12-14 09:20:06.557  INFO 19336 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure org.springframework.security.config.annotation.web.configurers.oauth2.server.authorization.OAuth2AuthorizationServerConfigurer$$Lambda$560/0x0000000801052fe0@202d9236 with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f782c05, org.springframework.security.web.context.SecurityContextPersistenceFilter@2173a742, org.springframework.security.web.header.HeaderWriterFilter@9687f55, org.springframework.security.web.csrf.CsrfFilter@134f8ef6, org.springframework.security.web.authentication.logout.LogoutFilter@65514add, org.springframework.security.oauth2.server.authorization.web.OAuth2AuthorizationEndpointFilter@38d80d65, org.springframework.security.oauth2.server.authorization.oidc.web.OidcProviderConfigurationEndpointFilter@2b736fee, org.springframework.security.oauth2.server.authorization.web.NimbusJwkSetEndpointFilter@6661d8c0, org.springframework.security.oauth2.server.authorization.web.OAuth2AuthorizationServerMetadataEndpointFilter@41bfa9e9, org.springframework.security.oauth2.server.authorization.web.OAuth2ClientAuthenticationFilter@1c34365c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@68b7d0ef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7f6329cb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b8137c5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d6ac396, org.springframework.security.web.session.SessionManagementFilter@671d03bb, org.springframework.security.web.access.ExceptionTranslationFilter@208205ed, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5f0bab7e, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenEndpointFilter@7126e26, org.springframework.security.oauth2.server.authorization.oidc.web.OidcUserInfoEndpointFilter@411cd156, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenIntrospectionEndpointFilter@552cede7, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenRevocationEndpointFilter@19e21f89]
+2023-12-14 09:20:06.971  INFO 19336 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e12a5a6, org.springframework.security.web.context.SecurityContextPersistenceFilter@7fbd3e75, org.springframework.security.web.header.HeaderWriterFilter@3cc053, org.springframework.security.web.csrf.CsrfFilter@1a1ccaaf, org.springframework.security.web.authentication.logout.LogoutFilter@2ce03e86, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4e0cc334, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@198536f6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7fdd43cd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4877919f, org.springframework.security.web.session.SessionManagementFilter@388c519, org.springframework.security.web.access.ExceptionTranslationFilter@7b53b1ad, org.springframework.security.web.access.intercept.AuthorizationFilter@7bee8621]
+2023-12-14 09:20:09.230  INFO 19336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2023-12-14 09:20:09.351  INFO 19336 --- [main] msrfyl.app.oauth.OauthApplicationKt      : Started OauthApplicationKt in 20.178 seconds (JVM running for 24.401)
+2023-12-14 09:20:09.364  INFO 19336 --- [main] msrfyl.app.oauth.OauthApplication        : application is ready
+2023-12-14 09:28:25.176  INFO 19336 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 09:28:25.177  INFO 19336 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-14 09:28:25.179  INFO 19336 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-12-14 09:28:35.294 ERROR 19336 --- [http-nio-9000-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class msrfyl.app.oauth.security.AuthorizationServerConfig$$Lambda$580/0x000000080106e248 and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS)
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1300) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:400) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:46) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:29) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:480) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:319) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ObjectMapper._writeValueAndClose(ObjectMapper.java:4568) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at com.fasterxml.jackson.databind.ObjectMapper.writeValueAsString(ObjectMapper.java:3821) ~[jackson-databind-2.13.2.1.jar:2.13.2.1]
+	at msrfyl.app.oauth.security.MyAuthProvider.authenticate(Configuration.kt:57) ~[classes/:na]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182) ~[spring-security-core-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:85) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:223) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:213) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:132) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at msrfyl.app.oauth.security.SimpleCORSFilter.doFilter(Configuration.kt:106) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-12-14 09:33:26.318  INFO 12396 --- [main] msrfyl.app.oauth.OauthApplicationKt      : Starting OauthApplicationKt using Java 17.0.6 on DESKTOP-9ND0UED with PID 12396 (D:\Msrfyl\coding\oauth\target\classes started by Datacom Backend in D:\Msrfyl\coding\oauth)
+2023-12-14 09:33:26.323  INFO 12396 --- [main] msrfyl.app.oauth.OauthApplicationKt      : No active profile set, falling back to 1 default profile: "default"
+2023-12-14 09:33:30.090  INFO 12396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2023-12-14 09:33:30.114  INFO 12396 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-14 09:33:30.115  INFO 12396 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2023-12-14 09:33:30.412  INFO 12396 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-14 09:33:30.413  INFO 12396 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3834 ms
+2023-12-14 09:33:31.004  INFO 12396 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: auth-client
+2023-12-14 09:33:31.019  INFO 12396 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: giats-client
+2023-12-14 09:33:31.020  INFO 12396 --- [main] m.a.o.s.AuthorizationServerConfig        : register client: msrfyl-client
+2023-12-14 09:33:31.922  INFO 12396 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure org.springframework.security.config.annotation.web.configurers.oauth2.server.authorization.OAuth2AuthorizationServerConfigurer$$Lambda$560/0x0000000801052828@202d9236 with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f782c05, org.springframework.security.web.context.SecurityContextPersistenceFilter@2173a742, org.springframework.security.web.header.HeaderWriterFilter@9687f55, org.springframework.security.web.csrf.CsrfFilter@134f8ef6, org.springframework.security.web.authentication.logout.LogoutFilter@65514add, org.springframework.security.oauth2.server.authorization.web.OAuth2AuthorizationEndpointFilter@38d80d65, org.springframework.security.oauth2.server.authorization.oidc.web.OidcProviderConfigurationEndpointFilter@2b736fee, org.springframework.security.oauth2.server.authorization.web.NimbusJwkSetEndpointFilter@6661d8c0, org.springframework.security.oauth2.server.authorization.web.OAuth2AuthorizationServerMetadataEndpointFilter@41bfa9e9, org.springframework.security.oauth2.server.authorization.web.OAuth2ClientAuthenticationFilter@1c34365c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@68b7d0ef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7f6329cb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b8137c5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d6ac396, org.springframework.security.web.session.SessionManagementFilter@671d03bb, org.springframework.security.web.access.ExceptionTranslationFilter@208205ed, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5f0bab7e, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenEndpointFilter@7126e26, org.springframework.security.oauth2.server.authorization.oidc.web.OidcUserInfoEndpointFilter@411cd156, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenIntrospectionEndpointFilter@552cede7, org.springframework.security.oauth2.server.authorization.web.OAuth2TokenRevocationEndpointFilter@19e21f89]
+2023-12-14 09:33:31.989  INFO 12396 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@392781e, org.springframework.security.web.context.SecurityContextPersistenceFilter@623e0631, org.springframework.security.web.header.HeaderWriterFilter@661d6bb6, org.springframework.security.web.csrf.CsrfFilter@16f0ec18, org.springframework.security.web.authentication.logout.LogoutFilter@245253d8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@787e4357, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@359066bc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@385dfb63, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3fcbc766, org.springframework.security.web.session.SessionManagementFilter@733fb462, org.springframework.security.web.access.ExceptionTranslationFilter@6c977dcf, org.springframework.security.web.access.intercept.AuthorizationFilter@67fb5025]
+2023-12-14 09:33:33.173  INFO 12396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2023-12-14 09:33:33.208  INFO 12396 --- [main] msrfyl.app.oauth.OauthApplicationKt      : Started OauthApplicationKt in 8.092 seconds (JVM running for 10.395)
+2023-12-14 09:33:33.214  INFO 12396 --- [main] msrfyl.app.oauth.OauthApplication        : application is ready
+2023-12-14 09:33:54.886  INFO 12396 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-14 09:33:54.887  INFO 12396 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-14 09:33:54.890  INFO 12396 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-12-14 09:34:03.452 ERROR 12396 --- [http-nio-9000-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+java.lang.NullPointerException: null cannot be cast to non-null type org.springframework.security.oauth2.server.authorization.authentication.OAuth2ClientAuthenticationToken
+	at msrfyl.app.oauth.security.MyAuthProvider.authenticate(Configuration.kt:56) ~[classes/:na]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182) ~[spring-security-core-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:85) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:223) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:213) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:132) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.3.jar:5.6.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at msrfyl.app.oauth.security.SimpleCORSFilter.doFilter(Configuration.kt:108) ~[classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+

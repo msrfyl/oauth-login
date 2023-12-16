@@ -43,6 +43,13 @@
             border: 1px solid rgba(255, 255, 255, 0.15);width: 100%;height: 40px;outline: none;
             box-sizing: border-box;box-shadow: 0px 0px 4px 1px #8AB7A2;border-radius: 16px;padding-left: 10px;
         }
+        #label-category {
+            font-weight: 500;font-size: 14px;line-height: 21px;
+        }
+        #input-category {
+            border: 1px solid rgba(255, 255, 255, 0.15);width: 100%;height: 40px;outline: none;
+            box-sizing: border-box;box-shadow: 0px 0px 4px 1px #8AB7A2;border-radius: 16px;padding-left: 10px;
+        }
         #button-login {
             font-weight: 500;font-size: 16px;line-height: 27px; right: 0px; position:absolute; width: 40%;height: 40px;
             display: flex;align-items: center;background: #FF6E05;border-radius: 26px;color: #ffffff;justify-content: center;border-color: transparent;
@@ -85,6 +92,16 @@
             <p>
                 <label for="input-password" class="sr-only" id="label-password">Password</label>
                 <input id="input-password" type="password" name="password" class="form-control" required>
+            </p>
+            <p>
+                <label for="input-category" class="sr-only" id="label-category">Type</label>
+                <select id="input-category" class="form-control" type="text" name="category" required>
+                    <option value="web">Web Admin</option>
+                    <option value="user">Teacher</option>
+                    <option value="student">Student</option>
+                    <option value="parent">Parent</option>
+                </select>
+<!--                <input id="input-category" type="password" name="password" class="form-control" required>-->
             </p>
             <button id="button-login" class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
         </form>

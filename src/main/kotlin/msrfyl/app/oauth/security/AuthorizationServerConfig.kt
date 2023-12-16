@@ -1,5 +1,6 @@
 package msrfyl.app.oauth.security
 
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.nimbusds.jose.jwk.JWKSelector
 import com.nimbusds.jose.jwk.JWKSet
 import com.nimbusds.jose.jwk.RSAKey

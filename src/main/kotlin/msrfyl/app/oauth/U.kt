@@ -55,6 +55,17 @@ object U {
             )))),
                     Pair("provider", pair("auth-client", pair("token-uri", getAuth.url)))
             )))))
+            mapConfig["logging"] = mutableMapOf(
+                Pair("level", pair("root", "INFO")),
+                Pair("file", pair("name", "logs/oauth2/oauth2.log")),
+                Pair(
+                    "logback.rollingpolicy", mutableMapOf(
+                        Pair("file-name-pattern", "logs/oauth2/oauth2-%d{yyyy-MM-dd}.%i.log"),
+                        Pair("max-file-size", "1MB"),
+                        Pair("total-size-cap", "128MB"),
+                    )
+                )
+            )
             mapConfig["clients"] = registerClient()
             YAMLMapper().writeValue(File(configRunningPath), mapConfig)
         } ?: exitProcess(1)

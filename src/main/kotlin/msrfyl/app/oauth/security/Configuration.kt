@@ -1,6 +1,5 @@
 package msrfyl.app.oauth.security
 
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import msrfyl.app.oauth.U
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
@@ -15,18 +14,14 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
 import org.springframework.security.core.Authentication
 import org.springframework.security.core.AuthenticationException
+import org.springframework.security.core.context.SecurityContextHolder
+import org.springframework.security.oauth2.server.authorization.authentication.OAuth2ClientAuthenticationToken
 import org.springframework.security.web.SecurityFilterChain
 import org.springframework.stereotype.Component
-import org.springframework.web.cors.CorsConfiguration
-import org.springframework.web.cors.CorsConfigurationSource
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource
+import org.springframework.web.context.request.RequestContextHolder
+import org.springframework.web.context.request.ServletRequestAttributes
 import java.io.IOException
-import javax.servlet.Filter
-import javax.servlet.FilterChain
-import javax.servlet.FilterConfig
-import javax.servlet.ServletException
-import javax.servlet.ServletRequest
-import javax.servlet.ServletResponse
+import javax.servlet.*
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
@@ -59,16 +54,18 @@ class MyAuthProvider : AuthenticationProvider {
     override fun authenticate(authentication: Authentication): Authentication? {
         val name: String = authentication.name
         val password: String = authentication.credentials.toString()
+        val request = (RequestContextHolder.getRequestAttributes() as ServletRequestAttributes?)!!.request
+        val category = request.getParameter("category")
         val urlApi = "${U.getResource.url}/api/authenticate"
         val res = U.accessClient.post(urlApi)
-            .field("username", name)
+            .field("username", "$category-$name")
             .field("password", password)
             .asString()
-        logger.info("authenticate user $name [${res.status}]")
+        logger.info("authenticate user $category-$name [${res.status}]")
         when (res.status) {
             200 -> {
                 logger.info("success login $name")
-                return UsernamePasswordAuthenticationToken(name, password, ArrayList())
+                return UsernamePasswordAuthenticationToken("$category-$name", password, ArrayList())
             }
 
             401 -> throw BadCredentialsException("authorization server cant connecting with resource")
